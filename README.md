@@ -17,7 +17,7 @@ TO-DO
 Import the SQL file and change `web/includes/sql.php`. The `web` folder goes in the root of the web server.
 
 ### Setting up the client
-Redirect `osu.ppy.sh` to your server's IP using the hosts file
+Redirect `osu.ppy.sh` to your server's IP using the hosts file.
 
 ## Other information
 
