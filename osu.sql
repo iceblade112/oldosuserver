@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.10
--- https://www.phpmyadmin.net
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 18, 2017 at 08:41 AM
--- Server version: 5.5.56
--- PHP Version: 5.4.45
+-- Host: 127.0.0.1
+-- Generation Time: Jun 28, 2018 at 08:24 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ba7ryy`
+-- Database: `osu`
 --
 
 -- --------------------------------------------------------
@@ -26,18 +28,30 @@ SET time_zone = "+00:00";
 -- Table structure for table `scores`
 --
 
-CREATE TABLE IF NOT EXISTS `scores` (
-  `maphash` varchar(32) NOT NULL,
-  `passed` tinyint(1) NOT NULL
+CREATE TABLE `scores` (
+  `maphash` varchar(900) NOT NULL,
+  `user` varchar(30) NOT NULL,
+  `submithash` varchar(900) NOT NULL,
+  `300s` longtext NOT NULL,
+  `100s` longtext NOT NULL,
+  `50s` longtext NOT NULL,
+  `geki` longtext NOT NULL,
+  `katu` longtext NOT NULL,
+  `misses` longtext NOT NULL,
+  `score` longtext NOT NULL,
+  `maxcombo` longtext NOT NULL,
+  `perfect` longtext NOT NULL,
+  `mods` longtext NOT NULL,
+  `passed` tinyint(1) NOT NULL,
+  `grade` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `username` varchar(30) NOT NULL,
   `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -47,7 +61,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`username`, `password`) VALUES
-('nickname', 'pass in MD5');
+('nickname', 'pass in MD5'),
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
