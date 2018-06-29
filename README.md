@@ -4,7 +4,7 @@ A remake of the osu! build 99 (2007) PHP code. The source is available under the
 If you would like to "re-implement" the server yourself, [information is available on the wiki](https://github.com/iceblade112/oldosuserver/wiki).
 
 ## Screenshots
-TO-DO
+![screen1](http://i.imgur.com/H0ZqmdV.png)
 
 ## Instructions
 
