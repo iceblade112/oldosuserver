@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `scores` (
-  `maphash` varchar(900) NOT NULL,
+  `maphash` varchar(33) NOT NULL,
   `user` varchar(30) NOT NULL,
-  `submithash` varchar(900) NOT NULL,
+  `submithash` varchar(33) NOT NULL,
   `300s` longtext NOT NULL,
   `100s` longtext NOT NULL,
   `50s` longtext NOT NULL,
